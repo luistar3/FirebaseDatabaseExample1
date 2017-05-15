@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FirebaseDatabaseExample</string>
+    <string name="movie_name_hint">Enter Movie Name</string>
+</resources>
