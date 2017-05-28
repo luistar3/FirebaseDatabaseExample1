@@ -7,13 +7,18 @@ package com.usuarioupt.firebasedatabaseexample;
 public class Movie {
     public String movieName;
     public String moviePoster;
-    public float movieRating;
+    public String hecho;
+    public String des;
+    public String llave;
+    //public float movieRating;
     public Movie(){
     }
-    public Movie(String movieName,String moviePoster,float movieRating){
+    public Movie(String movieName,String moviePoster,String hecho,String des){
         this.movieName = movieName;
         this.moviePoster = moviePoster;
-        this.movieRating  = movieRating;
+        this.hecho = hecho;
+        this.des = des;
+        //this.movieRating  = movieRating;
     }
     public String getMovieName() {
         return movieName;
@@ -27,10 +32,22 @@ public class Movie {
     public void setMoviePoster(String moviePoster) {
         this.moviePoster = moviePoster;
     }
-    public float getMovieRating() {
-        return movieRating;
+    public String gethecho() {
+        return hecho;
     }
-    public void setMovieRating(float movieRating) {
-        this.movieRating = movieRating;
+    public void sethecho(String hecho) {
+        this.hecho= hecho;
     }
+    public String getdes() {
+        return des;
+    }
+    public void setdes(String des) {
+        this.hecho= des;
+    }
+    //public float getMovieRating() {
+     //   return movieRating;
+   // }
+   // public void setMovieRating(float movieRating) {
+        //this.movieRating = movieRating;
+    //}
 }
