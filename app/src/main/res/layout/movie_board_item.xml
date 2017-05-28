@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
-                android:text="DESCRIPCION" />
+                android:text="DESCRIPCION:" />
 
             <TextView
                 android:id="@+id/txt_descripcion"
@@ -78,10 +78,23 @@
                 tools:text="des" />
 
             <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="Hecho importante :" />
+
+            <TextView
+                android:id="@+id/txt_hecho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="DESCRIPCION:" />
+
+            <TextView
                 android:id="@+id/key"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".8"
+                android:layout_height="0dp"
                 android:gravity="center"
                 android:text=" "
                 android:textSize="18sp"

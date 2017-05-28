@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 viewHolder.tvMovieName.setText(model.getMovieName());
                 viewHolder.Descripcion.setText(model.getDes());
+                viewHolder.hechos.setText(model.getHecho());
 
                 //viewHolder.key.setText(model.ge);
                 final String key = getRef(position).getKey(); //obtener llave
@@ -129,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvMovieName;
         TextView key;
         TextView Descripcion;
+        TextView hechos;
 
         //RatingBar ratingBar;
         ImageView ivMoviePoster;
@@ -138,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
            // ratingBar = (RatingBar) v.findViewById(R.id.rating_bar);
             ivMoviePoster = (ImageView) v.findViewById(R.id.iv_movie_poster);
             key=(TextView)v.findViewById(R.id.key);
+            hechos = (TextView) v.findViewById(R.id.txt_hecho);
             Descripcion = (TextView) v.findViewById(R.id.txt_descripcion);
 
             v.setOnClickListener(new View.OnClickListener() {
