@@ -12,7 +12,10 @@ public class Movie {
     public String llave;
     //public float movieRating;
     public Movie(){
+
+
     }
+
     public Movie(String movieName,String moviePoster,String hecho,String des){
         this.movieName = movieName;
         this.moviePoster = moviePoster;
@@ -26,28 +29,29 @@ public class Movie {
     public void setMovieName(String movieName) {
         this.movieName = movieName;
     }
+
+
     public String getMoviePoster() {
         return moviePoster;
     }
     public void setMoviePoster(String moviePoster) {
         this.moviePoster = moviePoster;
     }
-    public String gethecho() {
+
+
+    public String getHecho() {
         return hecho;
     }
-    public void sethecho(String hecho) {
+    public void setHecho(String hecho) {
         this.hecho= hecho;
     }
-    public String getdes() {
+
+
+    public String getDes() {
         return des;
     }
-    public void setdes(String des) {
-        this.hecho= des;
+    public void setDes(String des) {
+        this.des= des;
     }
-    //public float getMovieRating() {
-     //   return movieRating;
-   // }
-   // public void setMovieRating(float movieRating) {
-        //this.movieRating = movieRating;
-    //}
+
 }
