@@ -46,6 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ingrese Hecho Relevante"
         android:inputType="textPersonName" />
 
     <Button
@@ -55,9 +56,13 @@
         android:text="Actualizar" />
 
     <TextView
-        android:id="@+id/lbl_himportante"
+        android:id="@+id/lbl_h_importante"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:background="#147967"
+        android:text="TextView"
+        android:textColor="#f3f9f6"
+        android:textSize="25dp"
+         />
 
 </LinearLayout>

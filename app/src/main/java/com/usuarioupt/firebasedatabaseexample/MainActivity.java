@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                     String titulo = tvMovieName.getText().toString();
                     String llave = key.getText().toString();
                     String descrip = Descripcion.getText().toString();
+                    String echo = hechos.getText().toString();
                     Toast.makeText(v.getContext(),llave,Toast.LENGTH_LONG).show();
 
                     Intent intent = new Intent(mContext, Nuevo.class);
@@ -157,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("descrip",descrip);
                     intent.putExtra("tema",titulo);
                     intent.putExtra("llave",llave);
+                    intent.putExtra("echo",echo);
 
 
                     mContext.startActivity(intent);

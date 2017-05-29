@@ -70,7 +70,7 @@ public class AddMovieFragment extends Fragment implements View.OnClickListener{
         switch(view.getId()){
             case R.id.b_submit:
                 if(!isEmpty(movieName) && !isEmpty(movieName)){
-                    myNewMovie("80", movieName.getText().toString().trim(),movieLogo.getText().toString(),hecho.getText().toString(),des.getText().toString());
+                    myNewMovie("80", movieName.getText().toString().trim(),movieLogo.getText().toString(),"="+hecho.getText().toString(),des.getText().toString());
                 }else{
                     if(isEmpty(movieName)){
                         Toast.makeText(getContext(), "Llene campo!", Toast.LENGTH_SHORT).show();

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
@@ -24,6 +25,7 @@ public class Nuevo extends AppCompatActivity {
     Button actualizar;
     EditText hecho_edit;
     String taskId;
+    TextView h_importante;
     private Firebase mref;
     private DatabaseReference mDatabase;
     private static Context mContext;
@@ -41,22 +43,61 @@ public class Nuevo extends AppCompatActivity {
         llave =(EditText)findViewById(R.id.txt_llave);
         actualizar = (Button) findViewById(R.id.btn_actualizar);
         hecho_edit = (EditText) findViewById(R.id.txt_hecho_edit);
+        h_importante = (TextView) findViewById(R.id.lbl_h_importante);
 
         String v_tema = getIntent().getStringExtra("tema");
         final String v_llave = getIntent().getStringExtra("llave");
+        final String v_echo = getIntent().getStringExtra("echo");
 
         tema.setText(v_tema);
         llave.setText(v_llave);
+        String[] parte = v_echo.split("=");
+
+
+        int en= parte.length;
+        String mostrar="";
+
+        if (en <=2){
+
+            if (en==0){
+
+                mostrar=mostrar+"HECHE RELEVANTE 1: \n";
+                mostrar=mostrar+parte[1];
+            }
+            else {
+
+                mostrar="HECHE RELEVANTE 2: \n";
+                mostrar=mostrar+parte[0];
+                mostrar=mostrar+"HECHE RELEVANTE 1: \n";
+                mostrar=mostrar+parte[1];
+            }
+
+        }
+
+        else{
+
+            en = en-2;
+            mostrar="HECHE RELEVANTE 1: \n";
+            mostrar=mostrar+(parte[en]+"\n");
+            mostrar=mostrar+"HECHE RELEVANTE 2: \n";
+            mostrar=mostrar+(parte[en+1]);
+
+        }
+
+        h_importante.setText(mostrar);
         tema.setEnabled(false);
         llave.setEnabled(false);
 
          taskId = llave.getText().toString();
 
-
+        String aRemplazar="hola como estas";
+        String remplazado=aRemplazar.replace("a", "");
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+
         mContext=this;
+
 
         actualizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +109,7 @@ public class Nuevo extends AppCompatActivity {
                         .child("80")
                         .child("temas")
                         .child(k)
-                        .child("hecho").setValue(hecho_edit.getText().toString());
+                        .child("hecho").setValue(v_echo.toString()+"="+hecho_edit.getText().toString());
 //
 //                String Id = "-KlCX0J4DW4J_TkYefv2";
 //                mref = new Firebase("https://fir-d77bf.firebaseio.com");
