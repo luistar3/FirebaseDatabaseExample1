@@ -53,7 +53,7 @@
         android:id="@+id/btn_actualizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Actualizar" />
+        android:text="Actualizar Hecho" />
 
     <TextView
         android:id="@+id/lbl_h_importante"
